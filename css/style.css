@@ -1,14 +1,15 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
 
 :root {
     --main-color: #10cab7;
-}
-
-body {
-    height: 500vh;
+    --second-color: #2D4655;
+    --h2-color: #EAECED;
+    --h2-font-size: 7rem;
 }
 
 .container {
@@ -156,28 +157,31 @@ header ul li a {
 
 /* Start Benefits Part  */
 
+.section {
+    padding: 4rem 0;
+}
+
 .benefits {
     background-color: #F6F6F6;
-    padding: 5rem 0;
 }
 
 .benefits .container {
-    text-align: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     justify-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .benefits .card {
-    max-width: 24rem;
+    text-align: center;
+    padding: 1em;
 }
 
 i {
     color: var(--main-color);
 }
 
-.benefits h2 {
+.benefits h3 {
     text-transform: capitalize;
     font-size: 1.1rem;
     font-weight: 800;
@@ -192,13 +196,312 @@ i {
 
 /* End Benefits Part  */
 
+/* Start Services Part  */
+
+/* Start General Rules In All Sections  */
+
+.section h2 {
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    font-size: var(--h2-font-size);
+    color: var(--h2-color);
+    letter-spacing: -5px;
+    text-align: center;
+}
+
+.section .quote {
+    color: #777;
+    text-align: center;
+    margin: -2rem 0 0 0;
+}
+
+.section .quote::first-letter {
+    text-transform: capitalize;
+}
+
+/* End General Rules In All Sections  */
+
+.services .content {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem
+}
+
+.services .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 3rem;
+}
+
+.service {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+.service h3 {
+    margin-top: 0;
+}
+
+.services .img-service {
+    height: 20rem;
+    position: relative;
+}
+
+.services .img-service::before {
+    content: '';
+    width: 6rem;
+    height: 28rem;
+    position: absolute;
+    background-color: #2D4655;
+    top: -4rem;
+    right: -3rem;
+    z-index: -1;
+}
+
+.services .img-service img {
+    height: 100%;
+}
+
+/* End Services Part  */
+
+/* Start Portfolio Part */
+
+.portfolio {
+    background-color: #f6f6f6;
+}
+
+.projects {
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 2rem;
+    line-height: 2;
+}
+
+.project {
+    padding: 0;
+    background-color: #fff;
+}
+
+.project .image-holder {
+    width: 100%;
+    height: 55%;
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+    transition: .3s ease all;
+}
+
+.project .project-info {
+    padding: 1rem;
+}
+
+.project h3 {
+    color: #111;
+    transition: .5s ease all;
+}
+
+.project p {
+    color: #777;
+}
+
+.project:hover img {
+    transform: scale(1.2) rotate(3deg);
+    opacity: .5;
+}
+
+.project:hover h3 {
+    color: var(--main-color);
+}
+
+/* End Portfolio Part */
+
+/* Start About Part */
+
+.about .content {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    margin-top: 4rem;
+}
+
+.about .image-holder {
+    width: 15rem;
+    height: 360px;
+    position: relative;
+}
+
+.about .image-holder::before {
+    content: '';
+    width: 6rem;
+    height: 120%;
+    background-color: #EAECED;
+    position: absolute;
+    left: -1rem;
+    top: -10%;
+    z-index: -1;
+}
+
+.about .image-holder::after {
+    content: '';
+    width: 8rem;
+    height: 75%;
+    position: absolute;
+    right: calc(-8rem - 5rem / 3);
+    top: -10%;
+    border-left: 5rem solid var(--main-color);
+    border-bottom: 5rem solid var(--main-color);
+    z-index: -1;
+}
+
+.about .image-holder img {
+    width: 100%;
+}
+
+.about .content .desc {
+    width: 40vw;
+    padding: 1rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about .content .desc p:first-child {
+    font-weight: bold;
+}
+
+.about hr {
+    width: 60%;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.about .content .desc p:last-child {
+    color: #777;
+}
+
+/* End About Part */
+
+/* Start Contact Part */
+
+.contact {
+    background-color: #f7f7f7;
+}
+
+.contact .content {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact .content .contact-message {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--second-color);
+    letter-spacing: -2px;
+}
+
+.contact .content a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--main-color)
+}
+
+.contact i {
+    color: var(--second-color)
+}
+
+/* End Contact Part */
+
+/* Start Footer Part */
+
+footer {
+    background-color: var(--second-color);
+    padding: 2rem 0;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+}
+
+footer a,
+footer span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* End Footer Part */
+
 @media (max-width: 786px) {
     .container {
         width: 95vw;
         margin: 0;
         padding: 0;
     }
+
+    .services .service {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .services .service-info {
+        text-align: center;
+        width: 80vw;
+        margin: auto;
+    }
+
+    .projects {
+        padding: 1rem;
+    }
+
 }
 
-@media (min-width: 787px) and (max-width: 992px) {
+@media (max-width: 992px) {
+    .about .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        padding-top: 3rem;
+    }
+
+    .about .content .image-holder::after {
+        display: none;
+    }
+    
+    .about .content .image-holder::before {
+        display: none;
+    }
+    
+    .about .content .desc {
+        padding: 1rem;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .about .content .desc p {
+        padding: 2rem 0;
+    }
+
+    .about hr {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1199px) {
+    .services .img-service {
+        display: none;
+    }
 }
