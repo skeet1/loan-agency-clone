@@ -7,6 +7,10 @@
     --main-color: #10cab7;
 }
 
+body {
+    height: 500vh;
+}
+
 .container {
     width: 90vw;
     max-width: 1140px;
@@ -131,7 +135,7 @@ header ul li a {
 }
 
 .landing .container {
-    width: 350px;
+    width: 22rem;
     text-align: center;
 }
 
@@ -150,8 +154,63 @@ header ul li a {
 
 /* End Landing Part */
 
+/* Start Benefits Part  */
+
+.benefits {
+    background-color: #F6F6F6;
+    padding: 5rem 0;
+}
+
+.benefits .container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 2rem;
+}
+
+.benefits .card {
+    max-width: 24rem;
+}
+
+i {
+    color: var(--main-color);
+}
+
+.benefits h2 {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.benefits p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+/* End Benefits Part  */
+
 @media (max-width: 786px) {
     .container {
-        width: 100vw;
+        width: 95vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .benefits .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 787px) and (max-width: 992px) {
+    .benefits .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 2rem;
+    }
+
+    .benefits .card {
+        width: 80%;
     }
 }
