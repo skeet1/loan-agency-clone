@@ -62,7 +62,7 @@ header nav img {
     transition: .3s ease all;
 }
 
-.links-icon:hover div:nth-child(2) {
+.links:hover div:nth-child(2) {
     width: 100%;
 }
 
@@ -72,7 +72,7 @@ header ul {
     padding: 0;
     width: 12rem;
     position: absolute;
-    top: 3.5rem;
+    top: 4rem;
     right: 0;
     display: none;
     transition: 0s ease all;
