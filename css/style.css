@@ -164,7 +164,7 @@ header ul li a {
 .benefits .container {
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     justify-items: center;
     gap: 2rem;
 }
@@ -198,19 +198,7 @@ i {
         margin: 0;
         padding: 0;
     }
-
-    .benefits .container {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (min-width: 787px) and (max-width: 992px) {
-    .benefits .container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0 2rem;
-    }
-
-    .benefits .card {
-        width: 80%;
-    }
 }
