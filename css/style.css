@@ -3,6 +3,10 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+:root {
+    --main-color: #10cab7;
+}
+
 .container {
     width: 90vw;
     max-width: 1140px;
@@ -114,6 +118,37 @@ header ul li a {
 }
 
 /* End Header Part */
+
+/* Start Landing Part */
+
+.landing {
+    height: calc(100vh - 4rem);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(17, 202, 183, 0.2)), url(./../images/landing.jpeg) ;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .container {
+    width: 350px;
+    text-align: center;
+}
+
+.landing h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--main-color)
+}
+
+.landing p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* End Landing Part */
 
 @media (max-width: 786px) {
     .container {
