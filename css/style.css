@@ -1,5 +1,124 @@
 * {
     box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
 }
 
+.container {
+    width: 90vw;
+    max-width: 1140px;
+    padding: 0 1em;
+    margin: 0 auto;
+}
 
+header {
+    height: 4rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav img {
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+.list  {
+    position: relative;
+}
+
+.list-icon {
+    width: 2.2rem;
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.list-icon > div {
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+.list-icon div:nth-child(2) {
+    width: 70%;
+    align-self: flex-end;
+    transition: .3s ease all;
+}
+
+.list-icon:hover div:nth-child(2) {
+    width: 100%;
+}
+
+header ul {
+    list-style: none;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 12rem;
+    position: relative;
+    top: 3.5rem;
+    visibility: hidden;
+    transition: 0s ease all;
+}
+
+.list-icon:hover + ul {
+    visibility: visible;
+}
+
+header ul::before {
+    content: '';
+    position: absolute;
+    border: 1rem solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    top: -2rem;
+    right: 0;
+}
+
+header ul li {
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+    visibility: hidden;
+    transition: .3s ease padding-left;
+}
+
+.list-icon:hover + ul > li {
+    visibility: visible;
+}
+
+header ul li:hover {
+    padding-left: 1.5rem;
+}
+
+header ul li:not(:last-child) {
+    position: relative;
+}
+
+header ul li:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    bottom: 0px;
+    left: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #333;
+}
+
+@media (max-width: 786px) {
+    .container {
+        width: 100vw;
+    }
+}
