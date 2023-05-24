@@ -10,6 +10,7 @@
     --second-color: #2D4655;
     --h2-color: #EAECED;
     --h2-font-size: 7rem;
+    --section-background: #F6F6F6;
 }
 
 .container {
@@ -229,13 +230,12 @@ i {
 
 .services .services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 3rem;
 }
 
 .service {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     gap: 2rem;
     color: #333;
     line-height: 1.7;
@@ -263,6 +263,33 @@ i {
 
 .services .img-service img {
     height: 100%;
+}
+
+@media (max-width: 1199px) {
+    .service .content {
+        padding: 4rem 1rem;
+    }
+    .services .img-service {
+        display: none;
+    }
+}
+
+@media (max-width: 860px) {
+    .services .content {
+        gap: 0rem
+    }
+    .services .content .services-list{
+        grid-template-columns: 80vw;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .services .service {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 /* End Services Part  */
@@ -455,28 +482,13 @@ footer a {
     .section .quote {
         color: #777;
         text-align: center;
-        margin: -1rem 0 0 0;
+        margin: -1.5rem 0 0 0;
     }
 
     .container {
-        width: 95vw;
+        width: 100vw;
         margin: 0;
-        padding: 0;
-    }
-
-    .services .content {
-        gap: 0;
-    }
-
-    .services .service {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-
-    .services .service-info {
-        text-align: center;
-        width: 80vw;
-        margin: auto;
+        padding: 0 2vw;
     }
 
     .projects {
@@ -514,11 +526,5 @@ footer a {
 
     .about hr {
         margin: 0 auto;
-    }
-}
-
-@media (max-width: 1199px) {
-    .services .img-service {
-        display: none;
     }
 }
