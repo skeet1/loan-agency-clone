@@ -13,6 +13,10 @@
     --section-background: #F6F6F6;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 90vw;
     max-width: 1140px;
