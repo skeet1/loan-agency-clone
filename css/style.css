@@ -73,6 +73,12 @@ html {
     align-items: center;
 }
 
+@media (max-width: 786px) {
+    .goto-top {
+        display: none;
+    }
+}
+
 @keyframes top-and-down {
     0%, 100% {
         transform: translateY(0px);
