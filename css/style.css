@@ -548,6 +548,10 @@ footer a {
         --h2-font-size: 5rem;
     }
 
+    html {
+        font-size: 14px;
+    }
+
     .section h2 {
         text-align: center;
     }
@@ -559,8 +563,8 @@ footer a {
     }
 
     .container {
-        width: 100vw;
-        margin: 0;
+        width: 96vw;
+        margin: 0 auto;
         padding: 0 2vw;
     }
 
